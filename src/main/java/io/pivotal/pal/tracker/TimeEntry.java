@@ -4,6 +4,7 @@
 package io.pivotal.pal.tracker;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class TimeEntry {
 
@@ -69,5 +70,19 @@ public class TimeEntry {
 
     public void setHours(int hours) {
         this.hours = hours;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TimeEntry timeEntry = (TimeEntry) o;
+        return id == timeEntry.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
