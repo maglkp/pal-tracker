@@ -28,7 +28,8 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
     compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
-    compile("mysql:mysql-connector-java:6.0.6")
+    //compile("mysql:mysql-connector-java:6.0.6")
+    compile("mysql:mysql-connector-java:8.0.18")
     // needs to be locally: compile("mysql:mysql-connector-java:8.0.18")
     // needs to be on pcf: compile("mysql:mysql-connector-java:6.0.6")
 
